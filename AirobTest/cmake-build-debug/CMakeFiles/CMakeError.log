@@ -1,0 +1,59 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/beichen/CLionProjects/AirobTest/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_86139/fast"
+make[1]: Entering directory '/home/beichen/CLionProjects/AirobTest/cmake-build-debug/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_86139.dir/build.make CMakeFiles/cmTC_86139.dir/build
+make[2]: Entering directory '/home/beichen/CLionProjects/AirobTest/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_86139.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_86139.dir/CheckSymbolExists.c.o   -c /home/beichen/CLionProjects/AirobTest/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_86139
+/home/beichen/Downloads/clion-2018.3.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_86139.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_86139.dir/CheckSymbolExists.c.o  -o cmTC_86139 
+CMakeFiles/cmTC_86139.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_86139.dir/build.make:86: recipe for target 'cmTC_86139' failed
+make[2]: *** [cmTC_86139] Error 1
+make[2]: Leaving directory '/home/beichen/CLionProjects/AirobTest/cmake-build-debug/CMakeFiles/CMakeTmp'
+Makefile:121: recipe for target 'cmTC_86139/fast' failed
+make[1]: *** [cmTC_86139/fast] Error 2
+make[1]: Leaving directory '/home/beichen/CLionProjects/AirobTest/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+File /home/beichen/CLionProjects/AirobTest/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/beichen/CLionProjects/AirobTest/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_719fe/fast"
+make[1]: Entering directory '/home/beichen/CLionProjects/AirobTest/cmake-build-debug/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_719fe.dir/build.make CMakeFiles/cmTC_719fe.dir/build
+make[2]: Entering directory '/home/beichen/CLionProjects/AirobTest/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_719fe.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_719fe.dir/CheckFunctionExists.c.o   -c /home/beichen/Downloads/clion-2018.3.2/bin/cmake/linux/share/cmake-3.13/Modules/CheckFunctionExists.c
+Linking C executable cmTC_719fe
+/home/beichen/Downloads/clion-2018.3.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_719fe.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_719fe.dir/CheckFunctionExists.c.o  -o cmTC_719fe -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_719fe.dir/build.make:86: recipe for target 'cmTC_719fe' failed
+make[2]: *** [cmTC_719fe] Error 1
+make[2]: Leaving directory '/home/beichen/CLionProjects/AirobTest/cmake-build-debug/CMakeFiles/CMakeTmp'
+Makefile:121: recipe for target 'cmTC_719fe/fast' failed
+make[1]: *** [cmTC_719fe/fast] Error 2
+make[1]: Leaving directory '/home/beichen/CLionProjects/AirobTest/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
